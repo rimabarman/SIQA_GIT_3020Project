@@ -8,6 +8,7 @@ packages:
   gitUsername: rimabarman
   gitBranch: main
 - name: WmJDBCAdapter
+  version: 10.3.0.0.34
   wpmServer: https://packages.webmethods.io
   wpmRegistry: licensed
 services:
@@ -19,70 +20,132 @@ services:
     version: 10.3.0.0.34
     wpmServer: https://packages.webmethods.io
     wpmRegistry: licensed
+- serviceName: project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:Database_2
+  packages:
+  - name: SIQA_GIT_3020Project
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+- serviceName: project.siqa_git_3020.integrations:Test_adapter
+  packages:
+  - name: SIQA_GIT_3020Project
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
 configurationVariables:
   jdbc.Embedded-Database-Pool.waitingThread: "0"
-  ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.serverName
-  : 9.46.196.248
-  ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.keyStore
-  : ""
+  ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionEnabled
+  : "false"
   jdbcfunc.Xref.failFastMode: true
   ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.password
   : "{AES}D6/2AGfsSWDOcWCLrORnEQ=="
-  jdbcfunc.ISDashboardStats.connPoolAlias: Embedded-Database-Pool
   jdbcfunc.Xref.connPoolAlias: Embedded-Database-Pool
   jdbc.Embedded-Database-Pool.userid: APP
   ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.maximumPoolSize
   : "10"
   jdbcfunc.ISInternal.connPoolAlias: Embedded-Database-Pool
+  ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.poolable
+  : "false"
   jdbc.Embedded-Database-Pool.password: "{AES}Zcw2EXTJgNDVmVzJO2Y3Bw=="
   ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionEnabled
   : "false"
   ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.expireTimeout
   : "1000"
+  ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.datasourceClass
+  : com.wm.dd.jdbcx.sqlserver.SQLServerDataSource
   ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.poolIncrementSize
   : "1"
-  jdbc.Embedded-Database-Pool.snoopenabled: "false"
+  ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.startupRetryCount
+  : "0"
   jdbc.Embedded-Database-Pool.snoopparms: ddtdbg.ProtocolTraceEnable=true;ddtdbg.ProtocolTraceMaxline=16;ddtdbg.ProtocolTraceLocation=logs/snoop/Embedded-Database-Pool.log;ddtdbg.ProtocolTraceShowTime=true
-  jdbcfunc.ISInternal.failFastMode: true
   jdbc.Embedded-Database-Pool.maxConns: "10"
   jdbc.Embedded-Database-Pool.expireTime: "60000"
   jdbc.Embedded-Database-Pool.useSSL: "false"
   ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.minimumPoolSize
   : "1"
-  jdbc.Embedded-Database-Pool.minConns: "0"
+  ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.user
+  : sa
   jdbc.Embedded-Database-Pool.driverAlias: Embedded Database Driver
   jdbc.Embedded-Database-Pool.spyparms: SpyAttributes=(log=(file)logs/spy/Embedded-Database-Pool.log;logTName=yes;timestamp=yes)
-  ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.otherProperties
-  : loginTimeout=60;driverType=thin;
   jdbc.Embedded-Database-Pool.dbURL: jdbc:derby:embedded;create=true
   ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.startupRetryCount
   : "0"
+  ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.poolIncrementSize
+  : "1"
   ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.portNumber
   : "3306"
   jdbcfunc.ISDashboardStats.failFastMode: false
   ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.networkProtocol
   : tcp
+  jdbc.Embedded-Database-Pool.spyenabled: "false"
+  ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.keyStore
+  : ""
+  ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.trustStore
+  : ""
+  ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.portNumber
+  : "1433"
+  ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.startupBackoffSecs
+  : "10"
+  jdbc.Embedded-Database-Pool.poolThreshold: "0"
+  ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.startupBackoffSecs
+  : "10"
+  ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.trustStore
+  : ""
+  ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.datasourceClass
+  : com.mysql.cj.jdbc.MysqlDataSource
+  ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.serverName
+  : 9.46.196.248
+  ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.keyStore
+  : ""
+  ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.transactionType
+  : NO_TRANSACTION
+  jdbcfunc.ISDashboardStats.connPoolAlias: Embedded-Database-Pool
+  ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.minimumPoolSize
+  : "1"
+  ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.maximumPoolSize
+  : "10"
+  ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.otherProperties
+  : loginTimeout=60;driverType=thin;
+  jdbc.Embedded-Database-Pool.snoopenabled: "false"
+  jdbcfunc.ISInternal.failFastMode: true
+  jdbc.Embedded-Database-Pool.minConns: "0"
+  ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.expireTimeout
+  : "1000"
+  ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.driverType
+  : Progress® DataDirect®
+  ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.databaseName
+  : SIQACloud
+  ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.otherProperties
+  : loginTimeout=60;driverType=thin;
   ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.databaseName
   : MYSQL_DATABASE
   ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.heartBeatInterval
   : "0"
-  jdbc.Embedded-Database-Pool.spyenabled: "false"
   ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.blockingTimeout
   : "1000"
-  ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.trustStore
-  : ""
+  ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.blockingTimeout
+  : "1000"
+  ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.password
+  : "{AES}X4QCAWgjWkTdMQvFA5XaqGmK1wuN3U1rA1B0VhuZoUw="
+  ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.serverName
+  : 9.60.195.99
   ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.user
   : siqatest
+  ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.networkProtocol
+  : tcp
+  ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.heartBeatInterval
+  : "0"
   ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.transactionType
   : NO_TRANSACTION
-  ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.startupBackoffSecs
-  : "10"
-  jdbc.Embedded-Database-Pool.poolThreshold: "0"
   ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.dbType
   : MySQL
   ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.driverType
   : TestDriver1
   ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.poolable
   : "false"
-  ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.datasourceClass
-  : com.mysql.cj.jdbc.MysqlDataSource
+  ? artConnection.SIQA_GIT_3020Project.project.siqa_git_3020.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.dbType
+  : MSSQL
